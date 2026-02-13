@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's Day ❤️</title>
+<style>
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   font-family: 'Segoe UI', sans-serif;
+}
+body{
+   overflow:hidden;
+}
+.page{
+   display:none;
+   height:100vh;
+   width:100%;
+   text-align:center;
+   padding:30px 15px;
+   color:white;
+}
+h1{
+   font-size:32px;
+   margin-top:60px;
+}
+h2{
+   margin-top:20px;
+}
+button{
+   padding:12px 25px;
+   font-size:18px;
+   border:none;
+   border-radius:25px;
+   margin-top:20px;
+   background:#ff4d6d;
+   color:white;
+   cursor:pointer;
+}
+input{
+   padding:12px;
+   font-size:18px;
+   border-radius:20px;
+   border:none;
+   margin-top:20px;
+   text-align:center;
+}
+img.memory{
+   width:90%;
+   max-width:300px;
+   margin-top:20px;
+   border-radius:20px;
+}
+#welcome{
+   display:block;
+   background:linear-gradient(to bottom,#ff758c,#ff7eb3);
+}
+#memory{
+   background:linear-gradient(to bottom,#ff9a9e,#fad0c4);
+}
+#surprise{
+   background:linear-gradient(to bottom,#ff6a88,#ff99ac);
+}
+#final{
+   background-image:url('couple.jpg');
+   background-size:cover;
+   background-position:center;
+}
+.overlay{
+   background:rgba(0,0,0,0.5);
+   height:100%;
+   width:100%;
+   padding-top:100px;
+}
+</style>
+</head>
+<body>
+<!-- Optional Background Music -->
+<audio autoplay loop>
+ <source src="song.mp3" type="audio/mpeg">
+</audio>
+<!-- WELCOME PAGE -->
+<div id="welcome" class="page">
+   <h1>Hi Sahithi ❤️</h1>
+   <h2>You just opened my heart...</h2>
+   <button onclick="showMemory()">Click Here 💕</button>
+</div>
+<!-- MEMORY PAGE -->
+<div id="memory" class="page">
+   <h1>Our Beautiful Memories 💖</h1>
+   <img src="/home/sahi/Downloads/WhatsApp Image 2026-02-13 at 4.09.01 PM.jpeg" class="memory">
+   <img src="/home/sahi/Downloads/WhatsApp Image 2026-02-13 at 4.10.00 PM.jpeg" class="memory">
+   <h2>Enter Girlfriend Name to Unlock 🔐</h2>
+   <input type="text" id="nameInput" placeholder="Enter Name">
+   <br>
+   <button onclick="checkName()">Unlock</button>
+</div>
+<!-- SURPRISE PAGE -->
+<div id="surprise" class="page">
+   <h1>Access Granted ❤️</h1>
+   <img src="/home/sahi/Downloads/WhatsApp Image 2026-02-13 at 4.11.02 PM.jpeg" width="250">
+   <h2>You are my forever person 🥹</h2>
+   <button onclick="showFinal()">Final Surprise 🎁</button>
+</div>
+<!-- FINAL PAGE -->
+<div id="final" class="page">
+   <div class="overlay">
+       <h1 style="font-size:34px;">Happy Valentine’s Day Sahithi ❤️</h1>
+       <h2>I Love You Forever 💞</h2>
+   </div>
+</div>
+<script>
+function showMemory(){
+   document.getElementById("welcome").style.display="none";
+   document.getElementById("memory").style.display="block";
+}
+function checkName(){
+   var name=document.getElementById("nameInput").value;
+   if(name.toLowerCase()=="sahithi"){
+       document.getElementById("memory").style.display="none";
+       document.getElementById("surprise").style.display="block";
+   }else{
+       alert("Wrong password 😜 Try again!");
+   }
+}
+function showFinal(){
+   document.getElementById("surprise").style.display="none";
+   document.getElementById("final").style.display="block";
+}
+</script>
+</body>
+</html>
+ 
